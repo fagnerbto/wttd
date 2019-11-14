@@ -34,9 +34,12 @@ def verbing(s):
 # So 'This dinner is not that bad!' yields:
 # This dinner is good!
 def not_bad(s):
-    # +++your code here+++
-    return
-
+    
+    begin = s.find('not')    
+    end = s.find('bad') 
+    if begin < end:
+        s = s[:begin] + 'good' + s[(end + 3):]
+    return s
 
 # F. front_back
 # Consider dividing a string into two halves.
@@ -47,7 +50,14 @@ def not_bad(s):
 #  a-front + b-front + a-back + b-back
 def front_back(a, b):
     # +++your code here+++
-    return
+    
+    a_front =   a[:len(a)//2 + len(a)%2]
+    a_back  =   a[len(a)//2 + len(a)%2:]
+
+    b_front =   b[:len(b)//2 + len(b)%2]
+    b_back  =   b[len(b)//2 + len(b)%2:]
+    
+    return "".join([a_front,b_front,a_back,b_back])
 
 
 # Simple provided test() function used in main() to print

@@ -39,7 +39,18 @@ def match_ends(words):
 # Hint: this can be done by making 2 lists and sorting each of them
 # before combining them.
 def front_x(words):
-     return
+     words.sort()
+     list_x =  []
+     list_no_x = []
+
+     for w in words:
+          if w[0] == 'x':
+               list_x.append(w)
+          else:
+               list_no_x.append(w)
+
+     return list_x + list_no_x
+
 # C. sort_last
 # Given a list of non-empty tuples, return a list sorted in increasing
 # order by the last element in each tuple.

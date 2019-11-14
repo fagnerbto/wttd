@@ -45,7 +45,7 @@ def both_ends(s):
         return ''
     else:
         return s[:2] + s[-2:]
-                
+
 # C. fix_start
 # Given a string s, return a string
 # where all occurences of its first char have
@@ -56,8 +56,8 @@ def both_ends(s):
 # Hint: s.replace(stra, strb) returns a version of string s
 # where all instances of stra have been replaced by strb.
 def fix_start(s):
-    # +++your code here+++
-    return
+    # +++your code here+++    
+    return s[0] + s[1:].replace(s[0],"*")
 
 
 # D. MixUp

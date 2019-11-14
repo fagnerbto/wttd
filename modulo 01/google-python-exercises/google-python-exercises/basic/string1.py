@@ -25,7 +25,13 @@
 # and donuts(23) returns 'Number of donuts: many'
 def donuts(count):
     # +++your code here+++
-    return
+    result = 'Number of donuts: '
+
+    if count > 9:
+        result += 'many'
+    else:    
+        result += str(count)
+    return result
 
 
 # B. both_ends
@@ -36,8 +42,6 @@ def donuts(count):
 def both_ends(s):
     # +++your code here+++
     return
-
-
 # C. fix_start
 # Given a string s, return a string
 # where all occurences of its first char have

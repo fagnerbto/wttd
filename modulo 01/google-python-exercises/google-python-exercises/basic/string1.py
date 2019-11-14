@@ -59,7 +59,6 @@ def fix_start(s):
     # +++your code here+++    
     return s[0] + s[1:].replace(s[0],"*")
 
-
 # D. MixUp
 # Given strings a and b, return a single string with a and b separated
 # by a space '<a> <b>', except swap the first 2 chars of each string.
@@ -69,7 +68,7 @@ def fix_start(s):
 # Assume a and b are length 2 or more.
 def mix_up(a, b):
     # +++your code here+++
-    return
+    return b[0:2] + a[2:] + ' ' +  a[0:2] + b[2:] 
 
 
 # Provided simple test() function used in main() to print

@@ -70,7 +70,7 @@ def print_mimic(mimic_dict, word):
 
     while count <= 200:        
         print(count, word)
-        word = mimic_dict[word][0]
+        word = random.choice(list(mimic_dict[word]))
         count += 1
     # +++your code here+++
     return

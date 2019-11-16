@@ -1,5 +1,0 @@
-Basic
-    String 1    -   Feito
-    List 1      -   Feito
-    String 2    -   Feito
-    List 2      =

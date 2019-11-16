@@ -39,6 +39,43 @@ print_words() and print_top().
 
 import sys
 
+def populate_dict(list_of_words):
+    ocurrences = {}
+
+    for word in list_of_words:
+        if word in ocurrences:
+            ocurrences[word] += 1
+        else:
+            ocurrences[word] = 1
+    
+    return ocurrences
+
+def get_list_of_words(filename):
+    
+    file_as_string = open(filename,'r')
+    list_of_words = file_as_string.read().split()
+    file_as_string.close()
+    
+    return list_of_words
+
+
+def print_words(filename):
+    
+    ocurrences = populate_dict(get_list_of_words(filename))
+
+    for key, value in ocurrences.items():
+        print(key, value)
+
+    return
+
+def print_top(filename):
+    ocurrences = populate_dict(get_list_of_words(filename))
+    sorted_ocurrences =  [(k, ocurrences[k]) for k in sorted(ocurrences, key=ocurrences.get, reverse=True)]
+    
+    for key, value in sorted_ocurrences[:19]:
+        print(key, value)
+
+    return
 
 # +++your code here+++
 # Define print_words(filename) and print_top(filename) functions.
@@ -64,6 +101,7 @@ def main():
     else:
         print('unknown option: ' + option)
         sys.exit(1)
+
 
 
 if __name__ == '__main__':
